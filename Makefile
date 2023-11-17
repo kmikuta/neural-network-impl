@@ -4,6 +4,7 @@ DIST_PATH=dist
 clean:
 	@rm -rf $(VENV_PATH)
 	@rm -rf $(DIST_PATH)
+	@rm -rf .pytest_cache
 
 install:
 	python3 -m venv $(VENV_PATH)
