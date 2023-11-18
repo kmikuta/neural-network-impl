@@ -4,13 +4,14 @@ version = "0.1.0"
 description = "neural network implementation"
 authors = ["Krzysztof Mikuta <krzysztof.mikuta16@gmail.com>"]
 readme = "README.md"
-packages = [{include = "neural_network_impl"}]
+packages = [{ include = "neural_network" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 flake8 = "^6.1.0"
 pytest = "^7.4.3"
-
+mypy = "^1.7.0"
+numpy = "^1.26.2"
 
 [build-system]
 requires = ["poetry-core"]

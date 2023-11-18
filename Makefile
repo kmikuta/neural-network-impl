@@ -17,7 +17,11 @@ build:
 	@$(VENV_PATH)/bin/poetry build
 
 test:
-	@$(VENV_PATH)/bin/pytest ./tests
+	@$(VENV_PATH)/bin/pytest -rP
+
+test-ci:
+	@$(VENV_PATH)/bin/pytest
 
 lint:
-	@$(VENV_PATH)/bin/flake8 ./neural_network_impl
+	@$(VENV_PATH)/bin/mypy neural_network tests
+	@$(VENV_PATH)/bin/flake8 neural_network tests
